@@ -5,21 +5,21 @@
 class Monoctl < Formula
   desc "CLI for Monoskope. AuthN & AuthZ for Kubernetes multi-cluster, multi-cloud environments."
   homepage "https://github.com/finleap-connect/monoctl"
-  version "0.5.2-rev3"
+  version "0.5.3"
   license "Apache"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/finleap-connect/monoctl/releases/download/v0.5.2-rev3/monoctl-osx-amd64.tar.gz"
-      sha256 "ee8e5685cc22b6c099f917b6c4d0b2e68559a5cb067369b3e233e7a8c4cb5ed5"
+      url "https://github.com/finleap-connect/monoctl/releases/download/v0.5.3/monoctl-osx-amd64.tar.gz"
+      sha256 "fd70c8fad33e2917a6730ef76df4008053220f6f01d922154deb9d71ea538025"
 
       def install
         bin.install "monoctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/finleap-connect/monoctl/releases/download/v0.5.2-rev3/monoctl-osx-arm64.tar.gz"
-      sha256 "0c6b0e98476b92639e8906f0337271c98ccc916a611492903677b06875929856"
+      url "https://github.com/finleap-connect/monoctl/releases/download/v0.5.3/monoctl-osx-arm64.tar.gz"
+      sha256 "543c3c27439b42c82463ea5b8f89962731c613a643a9dfebf26a595ac0f4fac5"
 
       def install
         bin.install "monoctl"
@@ -28,17 +28,17 @@ class Monoctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/finleap-connect/monoctl/releases/download/v0.5.2-rev3/monoctl-linux-arm64.tar.gz"
-      sha256 "6c6360d57e20eb42198972cb0aa082b4afc425ea5e509971e26ebb1dded1ff85"
+    if Hardware::CPU.intel?
+      url "https://github.com/finleap-connect/monoctl/releases/download/v0.5.3/monoctl-linux-amd64.tar.gz"
+      sha256 "60b8961b96d62eed3bcf199129c4f56049f0994bcb018bd9f69b55c6fa1b93e1"
 
       def install
         bin.install "monoctl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/finleap-connect/monoctl/releases/download/v0.5.2-rev3/monoctl-linux-amd64.tar.gz"
-      sha256 "12fc9c30e38a2e400cd08175f310c827517ebbeea347f0559cafbd1f4dd2c000"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/finleap-connect/monoctl/releases/download/v0.5.3/monoctl-linux-arm64.tar.gz"
+      sha256 "141acc4116c9c879e05c617cb935e8db8e925794ae120a3ffe0e77e206ea448c"
 
       def install
         bin.install "monoctl"
