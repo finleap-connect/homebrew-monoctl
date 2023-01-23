@@ -5,21 +5,21 @@
 class Monoctl < Formula
   desc "CLI for Monoskope. AuthN & AuthZ for Kubernetes multi-cluster, multi-cloud environments."
   homepage "https://github.com/finleap-connect/monoctl"
-  version "0.5.6"
+  version "0.5.4"
   license "Apache"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/HaniAlshikh/monoctl/releases/download/v0.5.6/monoctl-osx-arm64.tar.gz"
-      sha256 "6d1b45063ea06a196c555734c3dfb313effd869ae3db1e9a13fbcc273ae6e2a4"
+      url "https://github.com/finleap-connect/monoctl/releases/download/v0.5.4/monoctl-osx-arm64.tar.gz"
+      sha256 "69e97022bd4555e4ad19d7944333a8696d90818c515d8e5d148f532e4b8b3e28"
 
       def install
         bin.install "monoctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/HaniAlshikh/monoctl/releases/download/v0.5.6/monoctl-osx-amd64.tar.gz"
-      sha256 "bcbef549be9e359624b8b6e0c24c71acd9ef1a71d6168f61f141fb67493d3d11"
+      url "https://github.com/finleap-connect/monoctl/releases/download/v0.5.4/monoctl-osx-amd64.tar.gz"
+      sha256 "5cb2054fa299e4964f5dbe3e0cf1804a620f28151570719bfb93bc5169054249"
 
       def install
         bin.install "monoctl"
@@ -29,16 +29,16 @@ class Monoctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HaniAlshikh/monoctl/releases/download/v0.5.6/monoctl-linux-arm64.tar.gz"
-      sha256 "0eebee79b56636870c0a9c706ebfa860f218232a9fd61c612a6650a5d12a7bc0"
+      url "https://github.com/finleap-connect/monoctl/releases/download/v0.5.4/monoctl-linux-arm64.tar.gz"
+      sha256 "c6e8a25ca0e133487befd8a72fe02eec0547afca8437df82eab74d3110712cb2"
 
       def install
         bin.install "monoctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/HaniAlshikh/monoctl/releases/download/v0.5.6/monoctl-linux-amd64.tar.gz"
-      sha256 "c8470f7a732dbee3d922da8fc0f3caf131b8418eaf63c8bf5afcb672770aab54"
+      url "https://github.com/finleap-connect/monoctl/releases/download/v0.5.4/monoctl-linux-amd64.tar.gz"
+      sha256 "99b93fe5b92f8a6dc149380abb209b12a82070f71bb5cd9b5d0865f6cebd7277"
 
       def install
         bin.install "monoctl"
